@@ -1,0 +1,60 @@
+# Coordinate relationships recovered from UrbanProject. This file is a
+# calibration record, not a runtime transform for the campus demo.
+map_id: urban-sandbox-v1
+map_version: urban-sandbox-v1.0
+status: needs_site_recalibration_before_hardware_use
+
+navigation_map:
+  frame_id: sandbox_map
+  image: map.pgm
+  format: pgm_p5
+  width_px: 300
+  height_px: 300
+  resolution_m_per_px: 0.05
+  origin_m: [-7.5, -7.5, 0.0]
+  occupied_threshold: 0.65
+  free_threshold: 0.25
+  usable_extent_m:
+    x: [-7.5, 7.5]
+    y: [-7.5, 7.5]
+
+physical_sandbox_reference:
+  # These points are for field calibration and are not a replacement for the
+  # ROS map origin above.
+  upper_left_odom_m: [0.0, 0.0]
+  lower_left_odom_m: [3.4, 0.4]
+  center_map_m: [2.05, 2.4]
+  uav_center_reference_m: [2.05, 2.5, 0.0]
+
+legacy_uav_uwb_to_sandbox_map:
+  source_frame: uav_uwb
+  target_frame: sandbox_map
+  method: axis_aligned_affine_baseline
+  equation:
+    sandbox_x_m: 4.1 - uav_uwb_x_m
+    sandbox_y_m: uav_uwb_y_m - 0.1
+    sandbox_z_m: uav_uwb_z_m
+  validation: Replace with measured correspondences before production use.
+
+carla_alignment_history:
+  target_frame: carla_world
+  warning: >-
+    Two historical calibration paths exist. Do not combine their scale or yaw
+    values. Recalibrate from physical corner measurements for each deployment.
+  ugv_odom_mirror_2026_08:
+    anchor_carla_xy_m: [26.89, 16.48]
+    scale: 9.63
+    reflect_y: true
+    yaw_deg: -173.3
+  coordinate_bus_seed:
+    source_sandbox_xy_m: [3.4, 0.4]
+    target_carla_xy_m: [26.89, -16.48]
+    scale: 12.0
+    reflect_y: true
+
+source:
+  project: D:/UrbanProject
+  files:
+    - ddsagent/map.pgm
+    - ddsagent/map.yaml
+  migrated_on: 2026-09-01

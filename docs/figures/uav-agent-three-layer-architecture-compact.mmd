@@ -1,0 +1,20 @@
+flowchart TB
+    subgraph UAV["uav-alpha · VehicleAgent"]
+        direction TB
+
+        P["① 持久化层：当前：设备配置 + 短期状态；生产：长期记忆 / Prompt / 决策审计"]
+        L["② LLM 推理层：当前：规则报价（能力 + 载荷 + ETA + 电量）；生产：LLM 结构化行动"]
+        D["③ DDS Reader / Writer 层：读取任务 / 坐标 / 分配；写出报价 / 状态 / 事件"]
+
+        P --> L --> D
+    end
+
+    classDef persistence fill:#EAF6FD,stroke:#2D89BC,stroke-width:2px,color:#000000;
+    classDef inference fill:#FFF5D8,stroke:#D99429,stroke-width:2px,color:#000000;
+    classDef dds fill:#E9F7F0,stroke:#2D8A67,stroke-width:2px,color:#000000;
+
+    class P persistence;
+    class L inference;
+    class D dds;
+
+    style UAV fill:#FFFFFF,stroke:#173D59,stroke-width:3px,color:#000000

@@ -43,6 +43,25 @@ IDL 位于 [idl/mission.idl](idl/mission.idl)，QoS 说明位于 [config/qos.yam
 - 沙盘：原点左上，`x = 80 + 2.8 * east`，`y = 440 - 2.8 * north`，单位像素。
 - `frame_id` 与 `map_version` 随任务、设备状态和转换结果发送，避免不同地图版本或坐标系混用。
 
+## 实体沙盘地图资产
+
+迁移自 UrbanProject 的真实 UAV/UGV 沙盘 ROS 栅格地图位于
+[`maps/urban-sandbox-v1/`](maps/urban-sandbox-v1/)。该地图是 `300 x 300`
+像素、`0.05 m/pixel` 的 `sandbox_map`，配有原始 `map.pgm`、ROS
+`map.yaml`、坐标标定记录和完整性验证脚本。
+
+当前 DDS 演示仍使用 `park_enu_v1` 与 640 x 440 的校园示意图，未自动切换
+到该实体地图；两者不能混用。将真实设备或 ROS 导航接入本项目时，必须添加
+显式的 `CAMPUS_LOCAL -> sandbox_map` 转换，并同步更新 DDS 的 `frame_id` 和
+`map_version`。详细的坐标边界、ROS 使用方法和 CARLA RRD 资产清单见
+[`maps/urban-sandbox-v1/README.md`](maps/urban-sandbox-v1/README.md)。
+
+验证迁移文件未被损坏：
+
+```powershell
+python .\tests\verify_sandbox_map.py
+```
+
 ## 运行
 
 在 PowerShell 中进入工程目录：
