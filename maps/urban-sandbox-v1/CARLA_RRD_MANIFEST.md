@@ -20,7 +20,9 @@ the original `CARLA-CustomMaps/install_custom_maps.sh` workflow, then set:
 export CARLA_MAP=RRD
 ```
 
-Do not put those Unreal assets in this DDS scheduler repository unless this
-project explicitly adopts CARLA as a runtime dependency. Their source layout,
-version coupling and size make them a deployment artifact rather than a small
-navigation-map asset.
+This repository now vendors the complete optional patch under
+`maps/urban-sandbox-v1/carla-rrd/CARLA-CustomMaps/` so that the migrated map can
+be transferred as one reproducible package. The current DDS scheduler demo
+does not load CARLA by default. The patch is a deployment artifact and still
+requires a compatible CARLA runtime; it is not a replacement for the ROS
+navigation raster in this directory.

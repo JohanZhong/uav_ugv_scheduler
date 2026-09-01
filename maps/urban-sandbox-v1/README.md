@@ -12,6 +12,7 @@ synthetic campus background rendered by this project's current DDS demo.
 | `map.yaml` | ROS map-server metadata for the raster. |
 | `alignment.yaml` | Coordinate-frame record and historical calibration values. |
 | `CARLA_RRD_MANIFEST.md` | Instructions for the separate CARLA digital-twin map. |
+| `carla-rrd/CARLA-CustomMaps/` | Complete optional CARLA custom-map patch, including RRD, referenced assets, RoadRunner runtime plugins, and installation metadata. |
 
 ## ROS map contract
 
@@ -29,6 +30,10 @@ ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=/absolute/path/
 
 Activating the node still requires the rest of the Nav2 lifecycle setup; this
 repository does not currently start ROS 2 or Nav2.
+
+The `carla-rrd/CARLA-CustomMaps/` directory is an optional CARLA deployment
+package. It is not loaded by the current DDS demo unless a compatible CARLA
+runtime is installed and configured separately.
 
 ## Coordinate boundary
 

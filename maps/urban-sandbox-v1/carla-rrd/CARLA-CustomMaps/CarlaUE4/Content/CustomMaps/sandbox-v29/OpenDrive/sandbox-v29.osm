@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" upload="false" generator="osmium/1.14.0">
+  <node id="1" lat="-0.0031903" lon="-0.0176152">
+    <tag k="crossing" v="no"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="2" lat="-0.0031888" lon="-0.017913"/>
+  <node id="3" lat="-0.0031088" lon="-0.0178017"/>
+  <node id="4" lat="-0.0031102" lon="-0.0176151"/>
+  <node id="5" lat="-0.0031153" lon="-0.0174329"/>
+  <node id="6" lat="-0.0035115" lon="-0.0179195"/>
+  <node id="7" lat="-0.0035165" lon="-0.0173188"/>
+  <node id="8" lat="-0.0031948" lon="-0.0173204"/>
+  <node id="9" lat="-0.0035899" lon="-0.017807"/>
+  <node id="10" lat="-0.0035949" lon="-0.0174307"/>
+  <node id="11" lat="-0.0033479" lon="-0.0178031"/>
+  <node id="12" lat="-0.0033487" lon="-0.0176175"/>
+  <node id="13" lat="-0.003283" lon="-0.0176171">
+    <tag k="tactile_paving" v="no"/>
+  </node>
+  <node id="14" lat="-0.0034174" lon="-0.0176179">
+    <tag k="tactile_paving" v="no"/>
+  </node>
+  <node id="15" lat="-0.0035159" lon="-0.0174306">
+    <tag k="crossing" v="no"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="16" lat="-0.0033502" lon="-0.0174317"/>
+  <node id="17" lat="-0.0031931" lon="-0.0174324">
+    <tag k="crossing" v="no"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="18" lat="-0.0035112" lon="-0.0178053">
+    <tag k="crossing" v="no"/>
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="19" lat="-0.0031884" lon="-0.017801">
+    <tag k="crossing" v="no"/>
+    <tag k="highway" v="traffic_signals"/>
+    <tag k="kerb" v="lowered"/>
+  </node>
+  <node id="20" lat="-0.0035132" lon="-0.0176155">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="21" lat="-0.0035159" lon="-0.0174016">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="22" lat="-0.0035457" lon="-0.0174307">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="23" lat="-0.0035148" lon="-0.0174632">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="24" lat="-0.0034839" lon="-0.0174309">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="25" lat="-0.0031937" lon="-0.0174025">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="26" lat="-0.0032238" lon="-0.0174313">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="27" lat="-0.0031923" lon="-0.0174652">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="28" lat="-0.0031607" lon="-0.0174322">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="29" lat="-0.0035107" lon="-0.0177716">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="30" lat="-0.0035438" lon="-0.0178053">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="31" lat="-0.0035113" lon="-0.0178354">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="32" lat="-0.0034763" lon="-0.0178043">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="33" lat="-0.0032273" lon="-0.0178007">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="34" lat="-0.0031889" lon="-0.017771">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="35" lat="-0.0031886" lon="-0.0178318">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="36" lat="-0.0031571" lon="-0.0178012">
+    <tag k="crossing" v="traffic_signals"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <way id="1">
+    <nd ref="1"/>
+    <nd ref="4"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="r3"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+  </way>
+  <way id="2">
+    <nd ref="11"/>
+    <nd ref="12"/>
+    <nd ref="16"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="r10"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="3.55"/>
+  </way>
+  <way id="3">
+    <nd ref="12"/>
+    <nd ref="14"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="r12"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="3.5"/>
+  </way>
+  <way id="4">
+    <nd ref="12"/>
+    <nd ref="13"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="name" v="r11"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="3.5"/>
+  </way>
+  <way id="5">
+    <nd ref="15"/>
+    <nd ref="16"/>
+    <nd ref="17"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r6"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+  <way id="6">
+    <nd ref="7"/>
+    <nd ref="15"/>
+    <nd ref="18"/>
+    <nd ref="6"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r16"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+  <way id="7">
+    <nd ref="9"/>
+    <nd ref="18"/>
+    <nd ref="11"/>
+    <nd ref="19"/>
+    <nd ref="3"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r2"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+  <way id="8">
+    <nd ref="8"/>
+    <nd ref="17"/>
+    <nd ref="1"/>
+    <nd ref="19"/>
+    <nd ref="2"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r5"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="no"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+  <way id="9">
+    <nd ref="10"/>
+    <nd ref="15"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r7"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+  <way id="10">
+    <nd ref="17"/>
+    <nd ref="5"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="name" v="r4"/>
+    <tag k="oneway" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="tactile_paving" v="no"/>
+    <tag k="width" v="8"/>
+  </way>
+</osm>
