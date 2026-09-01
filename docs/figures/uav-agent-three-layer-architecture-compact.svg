@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#123A5A"/>
+      <stop offset="100%" stop-color="#1D6689"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#163B56" flood-opacity="0.13"/>
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#163B56" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#36617E"/>
+    </marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#238365"/>
+    </marker>
+    <style>
+      .font { font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif; }
+      .title { font-size: 38px; font-weight: 700; fill: #FFFFFF; }
+      .subtitle { font-size: 17px; fill: #D9EBF3; }
+      .agent { font-size: 24px; font-weight: 700; fill: #173D59; }
+      .agent-sub { font-size: 15px; fill: #5F7A8C; }
+      .layer { font-size: 25px; font-weight: 700; fill: #173D59; }
+      .layer-sub { font-size: 15px; fill: #607A8D; }
+      .card-title { font-size: 19px; font-weight: 700; fill: #1B415D; }
+      .card-text { font-size: 16px; fill: #456279; }
+      .mono { font-family: Consolas, 'Courier New', monospace; font-size: 13px; font-weight: 700; fill: #1F6749; }
+      .small { font-size: 14px; fill: #5A7587; }
+      .footer-title { font-size: 19px; font-weight: 700; fill: #173D59; }
+      .footer-label { font-size: 15px; font-weight: 700; fill: #38586E; }
+      .footer-sub { font-size: 13px; fill: #6A8392; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#F5F9FC"/>
+  <rect width="1920" height="124" fill="url(#header)"/>
+  <rect x="74" y="34" width="8" height="55" rx="4" fill="#67CED6"/>
+  <text x="105" y="62" class="font title">UAV 执行智能体的三层架构</text>
+  <text x="106" y="93" class="font subtitle">以 uav-alpha（VehicleAgent）为例 · 答辩精简版</text>
+  <rect x="1556" y="39" width="282" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.14" stroke="#B8E2E9" stroke-opacity="0.55"/>
+  <text x="1697" y="65" text-anchor="middle" class="font" font-size="15" font-weight="700" fill="#FFFFFF">当前实现 + 生产扩展</text>
+
+  <!-- Agent shell -->
+  <rect x="70" y="160" width="1780" height="685" rx="22" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="70" y="160" width="1780" height="70" rx="22" fill="#EDF6FB"/>
+  <rect x="70" y="210" width="1780" height="20" fill="#EDF6FB"/>
+  <circle cx="111" cy="195" r="19" fill="#2D89BC"/>
+  <path d="M104 195 L111 188 L118 195 L111 202 Z" fill="#FFFFFF"/>
+  <text x="144" y="202" class="font agent">uav-alpha · VehicleAgent</text>
+  <text x="463" y="201" class="font agent-sub">热成像勘测无人机｜CAMERA_THERMAL｜向 Coordinator 发送候选报价</text>
+  <rect x="1573" y="178" width="238" height="28" rx="14" fill="#DDF3E9"/>
+  <text x="1692" y="197" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#277054">DDS 多智能体调度沙盘</text>
+
+  <!-- Column 1 -->
+  <rect x="100" y="264" width="505" height="530" rx="16" fill="#F0F8FE" stroke="#B8DDED" stroke-width="1.5"/>
+  <rect x="100" y="264" width="505" height="78" rx="16" fill="#D8EFFA"/>
+  <rect x="100" y="322" width="505" height="20" fill="#D8EFFA"/>
+  <circle cx="139" cy="303" r="20" fill="#2D89BC"/>
+  <text x="139" y="310" text-anchor="middle" class="font" font-size="20" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="174" y="300" class="font layer">持久化层</text>
+  <text x="174" y="322" class="font layer-sub">记忆 · 决策记录 · Prompt</text>
+  <rect x="124" y="368" width="457" height="107" rx="11" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  <rect x="124" y="368" width="7" height="107" rx="3.5" fill="#2D89BC"/>
+  <text x="152" y="404" class="font card-title">当前：设备配置与短期状态</text>
+  <text x="152" y="434" class="font card-text">能力、载荷、速度、电量、位置</text>
+  <text x="152" y="458" class="font card-text">任务缓存、已报价 / 已执行任务</text>
+  <rect x="124" y="505" width="457" height="166" rx="11" fill="#F9FCFE" stroke="#82BBD7" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <rect x="149" y="527" width="102" height="26" rx="13" fill="#79AEC8"/>
+  <text x="200" y="545" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#FFFFFF">生产扩展</text>
+  <text x="152" y="589" class="font card-title">长期记忆与可追溯决策</text>
+  <text x="152" y="620" class="font card-text">任务历史 · 异常案例 · Prompt 模板</text>
+  <text x="152" y="648" class="font small">数据库 / 事件存储，而非 DDS 缓存</text>
+  <text x="352" y="741" text-anchor="middle" class="font" font-size="14" font-weight="700" fill="#2B739B">提供任务上下文</text>
+
+  <!-- Column 2 -->
+  <rect x="708" y="264" width="505" height="530" rx="16" fill="#FFFAEC" stroke="#EDD99C" stroke-width="1.5"/>
+  <rect x="708" y="264" width="505" height="78" rx="16" fill="#FFF0C7"/>
+  <rect x="708" y="322" width="505" height="20" fill="#FFF0C7"/>
+  <circle cx="747" cy="303" r="20" fill="#D99429"/>
+  <text x="747" y="310" text-anchor="middle" class="font" font-size="20" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="782" y="300" class="font layer">LLM 推理层</text>
+  <text x="782" y="322" class="font layer-sub">任务理解 · 可行性评估 · 行动决策</text>
+  <rect x="732" y="368" width="457" height="137" rx="11" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  <rect x="753" y="389" width="103" height="26" rx="13" fill="#D99429"/>
+  <text x="804" y="407" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#FFFFFF">当前实现</text>
+  <text x="753" y="448" class="font card-title">确定性规则报价</text>
+  <text x="753" y="478" class="font card-text">能力 + 载荷 + ETA + 电量 → cost</text>
+  <rect x="732" y="535" width="457" height="136" rx="11" fill="#FFFDF7" stroke="#D5AC57" stroke-width="1.5" stroke-dasharray="8 5"/>
+  <rect x="753" y="556" width="102" height="26" rx="13" fill="#C59A44"/>
+  <text x="804" y="574" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#FFFFFF">生产扩展</text>
+  <text x="753" y="615" class="font card-title">LLM 生成结构化行动建议</text>
+  <text x="753" y="645" class="font card-text">Prompt + 记忆 → Schema / 业务校验</text>
+  <text x="961" y="741" text-anchor="middle" class="font" font-size="14" font-weight="700" fill="#956318">生成可执行动作</text>
+
+  <!-- Column 3 -->
+  <rect x="1316" y="264" width="505" height="530" rx="16" fill="#F0FAF5" stroke="#B8E0CE" stroke-width="1.5"/>
+  <rect x="1316" y="264" width="505" height="78" rx="16" fill="#D9F1E5"/>
+  <rect x="1316" y="322" width="505" height="20" fill="#D9F1E5"/>
+  <circle cx="1355" cy="303" r="20" fill="#2D8A67"/>
+  <text x="1355" y="310" text-anchor="middle" class="font" font-size="20" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="1390" y="300" class="font layer">DDS Reader &amp; Writer 层</text>
+  <text x="1390" y="322" class="font layer-sub">ZRDDS 类型契约、QoS、消息收发</text>
+  <rect x="1340" y="368" width="457" height="145" rx="11" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  <text x="1364" y="402" class="font card-title">Reader：接收任务与分配</text>
+  <text x="1364" y="434" class="font mono">TaskRequest · CoordinateTransform</text>
+  <text x="1364" y="462" class="font mono">TaskAssignment</text>
+  <rect x="1340" y="542" width="457" height="146" rx="11" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  <text x="1364" y="576" class="font card-title">Writer：报价、状态与事件</text>
+  <text x="1364" y="608" class="font mono">CandidateBid · VehicleState</text>
+  <text x="1364" y="636" class="font mono">VehicleCapability · ExecutionEvent</text>
+  <rect x="1340" y="714" width="457" height="42" rx="10" fill="#E0F4E9"/>
+  <text x="1568" y="741" text-anchor="middle" class="font" font-size="14" font-weight="700" fill="#287052">由 mission.idl 与 QoS 约束</text>
+
+  <!-- Main arrows -->
+  <path d="M605 540 H708" fill="none" stroke="#36617E" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="618" y="510" width="77" height="25" rx="12.5" fill="#FFFFFF" stroke="#C6DCE8"/>
+  <text x="656" y="528" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#34617D">上下文</text>
+  <path d="M1213 540 H1316" fill="none" stroke="#36617E" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="1227" y="510" width="76" height="25" rx="12.5" fill="#FFFFFF" stroke="#C6DCE8"/>
+  <text x="1265" y="528" text-anchor="middle" class="font" font-size="13" font-weight="700" fill="#34617D">动作</text>
+
+  <!-- Footer flow -->
+  <text x="82" y="901" class="font footer-title">DDS 协作闭环</text>
+  <text x="82" y="927" class="font small">UAV 只提出报价并执行获分配任务；Coordinator 负责全局选择，DashboardBridge 汇总执行结果。</text>
+  <rect x="100" y="957" width="245" height="56" rx="12" fill="#FFFFFF" stroke="#CEDDE6" filter="url(#cardShadow)"/>
+  <text x="222" y="982" text-anchor="middle" class="font footer-label">Planner / Coordinate</text>
+  <text x="222" y="1002" text-anchor="middle" class="font footer-sub">任务与坐标</text>
+  <rect x="677" y="947" width="566" height="76" rx="15" fill="#D9F1E5" stroke="#8FCCAe" filter="url(#cardShadow)"/>
+  <text x="960" y="981" text-anchor="middle" class="font" font-size="21" font-weight="700" fill="#23694D">uav-alpha · VehicleAgent</text>
+  <text x="960" y="1006" text-anchor="middle" class="font footer-sub">CandidateBid · VehicleState · ExecutionEvent</text>
+  <rect x="1575" y="957" width="245" height="56" rx="12" fill="#FFFFFF" stroke="#CEDDE6" filter="url(#cardShadow)"/>
+  <text x="1697" y="982" text-anchor="middle" class="font footer-label">Coordinator / Dashboard</text>
+  <text x="1697" y="1002" text-anchor="middle" class="font footer-sub">分配与可视化</text>
+  <path d="M345 985 H665" fill="none" stroke="#2D89BC" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1243 985 H1563" fill="none" stroke="#238365" stroke-width="3" marker-end="url(#greenArrow)"/>
+</svg>
